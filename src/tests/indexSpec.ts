@@ -18,7 +18,7 @@ describe('Testing The Endpoint', () => {
     expect(response.status).toBe(500);
   });
 
-  it('gets /api/images?filename=Stanly&width=1000&height=1000 (valid args)', async (): Promise<void> => {
+  it('gets /api/images?filename=Stanly&width=1000&height=1000 (valid arguments)', async (): Promise<void> => {
     const response: supertest.Response = await request.get(
       '/api/images?filename=Stanly&width=1000&height=1000'
     )});
@@ -52,4 +52,16 @@ describe('Testing The Image Processing', () => {
     );
     expect(fs.existsSync(outputPath)).toBeTrue();
   });
+
+  it('Returns an appropriate error message if the image to process does not exist or if an incorrect image name is entered.', async () => {
+    const response = await request.get(`/api/images?filename=wrongname&width=${width}&height=${height}`);
+    expect(response.text).toContain(`Wrong File Name`);
+  });
+
+
+  it('Returns an appropriate error message if the height or width is entered incorrectly or not.', async () => {
+    const response = await request.get(`/api/images?filename=${filename}&width=Wrong entry&height=${height}`);
+    expect(response.text).toContain('Wrong Height or Width');
+  });
+
 });
