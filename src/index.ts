@@ -8,7 +8,7 @@ parseInt(port);
 // Adding Routes
 app.use('/api', routes);
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.send(`<!DOCTYPE html>
     <html>
     <head>
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
       align-items: center;
     }
 
-            
+
     .btn-grad {
       background-image: linear-gradient(to right, #fc00ff 0%, #00dbde  51%, #fc00ff  100%);
       margin: 10px;
@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
       text-transform: uppercase;
       transition: 0.5s;
       background-size: 200% auto;
-      color: white;            
+      color: white;
       box-shadow: 0 0 20px #eee;
       border-radius: 10px;
       display: block;
@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
         color: #fff;
         text-decoration: none;
     }
-            
+
     </style>
     </head>
     <body>
@@ -64,7 +64,7 @@ app.get('/', (req, res) => {
     <div>
     <h1> Welcome To Image Processing API </h1>
     <p>Click the Button Bellow to Resize The Picture.</p>
-        
+
     <button class="btn-grad" onclick="window.location.href='http://localhost:8080/api/images?filename=Stanly&width=1000&height=1000';"> Press Me </button>
     </div>
 

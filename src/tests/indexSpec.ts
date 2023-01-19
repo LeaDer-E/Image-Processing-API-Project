@@ -17,7 +17,20 @@ describe('Testing The Endpoint', () => {
     const response = await request.get('/api/images');
     expect(response.status).toBe(500);
   });
+
+  it('gets /api/images?filename=Stanly&width=1000&height=1000 (valid args)', async (): Promise<void> => {
+    const response: supertest.Response = await request.get(
+      '/api/images?filename=Stanly&width=1000&height=1000'
+    )});
+
+  it('returns 404 for invalid endpoint', async (): Promise<void> => {
+    const response: supertest.Response = await request.get('/foo');
+    expect(response.status).toBe(404);
+  });
+
 });
+
+
 
 describe('Testing The Image Processing', () => {
   const filename = 'Stanly';

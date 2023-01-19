@@ -55,11 +55,11 @@ routes.get(
               align-items: center;
               background-color: black;
           }
-      
+
           p {
             font-size: 1.5em;
           }
-      
+
           div {
             border-left: 9px solid blue;
             background-color: #4158D0;
@@ -70,7 +70,7 @@ routes.get(
             justify-content: center;
             align-items: center;
           }
-                  
+
           .btn-grad {
             background-image: linear-gradient(to right, #fc00ff 0%, #00dbde  51%, #fc00ff  100%);
             margin: 10px;
@@ -79,29 +79,29 @@ routes.get(
             text-transform: uppercase;
             transition: 0.5s;
             background-size: 200% auto;
-            color: white;            
+            color: white;
             box-shadow: 0 0 20px #eee;
             border-radius: 10px;
             display: block;
           }
-      
+
           .btn-grad:hover {
               background-position: right center; /* change the direction of the change here */
               color: #fff;
               text-decoration: none;
           }
-                  
+
           </style>
           </head>
           <body>
-      
+
           <div>
-          <h1> Welcome To Image Processing API </h1>
-          <p>Please pass the write file name or go to the link bellow.</p>
-              
+          <h1> Wrong File Name </h1>
+          <p> Please Write the Right File Name, or press button bellow </p>
+
           <button class="btn-grad" onclick="window.location.href='http://localhost:8080/api/images?filename=Stanly&width=1000&height=1000';"> Press Me </button>
           </div>
-      
+
           </body>
           </html>`);
         }
@@ -134,7 +134,7 @@ routes.get(
       justify-content: center;
       align-items: center;
     }
-            
+
     .btn-grad {
       background-image: linear-gradient(to right, #fc00ff 0%, #00dbde  51%, #fc00ff  100%);
       margin: 10px;
@@ -143,7 +143,7 @@ routes.get(
       text-transform: uppercase;
       transition: 0.5s;
       background-size: 200% auto;
-      color: white;            
+      color: white;
       box-shadow: 0 0 20px #eee;
       border-radius: 10px;
       display: block;
@@ -154,15 +154,15 @@ routes.get(
         color: #fff;
         text-decoration: none;
     }
-            
+
     </style>
     </head>
     <body>
 
     <div>
-    <h1> Welcome To Image Processing API </h1>
-    <p>Set the filename, width and height as parameters in the URL (all three are required fields and width and height must be numeric). or press the button bellow</p>
-        
+    <h1> Wrong Height or Width </h1>
+    <p>Please Set the Height and Width, or press button bellow</p>
+
     <button class="btn-grad" onclick="window.location.href='http://localhost:8080/api/images?filename=Stanly&width=1000&height=1000';"> Press Me </button>
     </div>
 
