@@ -34,17 +34,17 @@ Start the server
 
 ## Example
 
-#### Works Fine
+### Works Fine
  - Image Resize 500 x 500
    http://localhost:8080/api/images?filename=Stanly&width=500&height=500
     --- 
     
-#### Wrong File Name
+### Wrong File Name
 - Please Write the Right File Name, or press button bellow
   http://localhost:8080/api/images?filename=Staanly&width=1000&height=1000
     ---   
 
-#### Wrong Height or Width
+### Wrong Height or Width
 - Please Set the Height and Width, or press button bellow
   http://localhost:8080/api/images?filename=Stanly&width=1000&
     --- 
