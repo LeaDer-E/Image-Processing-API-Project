@@ -31,6 +31,22 @@ Start the server
   npm run start
 ```
 
+
+## Example
+
+#### Works Fine
+ - Image Resize 500 x 500
+   http://localhost:8080/api/images?filename=Stanly&width=500&height=500
+    --- 
+#### Wrong File Name
+- Please Write the Right File Name, or press button bellow
+  http://localhost:8080/api/images?filename=Staanly&width=1000&height=1000
+    ---   
+
+#### Wrong Height or Width
+- Please Set the Height and Width, or press button bellow
+  http://localhost:8080/api/images?filename=Stanly&width=1000&
+    --- 
 ## Author's name.
 - [@Eslam Mustafa](https://github.com/LeaDer-E/)
 
@@ -44,3 +60,4 @@ Start the server
 
 
 ![Logo](https://s3-us-west-1.amazonaws.com/udacity-content/rebrand/svg/logo.min.svg)
+
