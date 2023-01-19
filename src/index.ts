@@ -8,7 +8,7 @@ parseInt(port);
 // Adding Routes
 app.use('/api', routes);
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (req: express.Request, res: express.Response) => {
   res.send(`<!DOCTYPE html>
     <html>
     <head>
