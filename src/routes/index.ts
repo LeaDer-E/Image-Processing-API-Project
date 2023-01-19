@@ -8,10 +8,7 @@ const routes = express.Router();
 
 routes.get(
   '/images',
-  async (
-    request: express.Request,
-    response: express.Response
-  ): Promise<any> => {
+  async (request: express.Request,response: express.Response): Promise<void> => {
     // Check if all 3 required parameters are set and width and height are numbers
     if (paramsChecking((request.query as unknown) as ImageQuery)) {
       // Set each parameter to a variable
