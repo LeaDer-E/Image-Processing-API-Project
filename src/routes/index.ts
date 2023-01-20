@@ -169,4 +169,15 @@ routes.get(
   }
 );
 
-export default routes;
+class ImagePaths {
+  // Default paths
+  static fullPathImageFolder = path.resolve('./Images/Image_Folder');
+  static thumbnailsPathFolder = path.resolve('./Images/Image_Thubnails');
+ }
+
+export {
+  routes,
+  ImagePaths
+};
+
+

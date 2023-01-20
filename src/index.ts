@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from './routes/index';
+import {routes} from './routes/index';
 
 const app: express.Application = express();
 const port: string = '8080'; // Default port
@@ -81,4 +81,8 @@ app.listen(
   }
 );
 
-export { app, port };
+
+export {
+  app,
+  port,
+  };
